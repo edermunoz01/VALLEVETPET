@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valle Vet Pet</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <!-- Barra de Navegación Verde Superior -->
+    <header class="main-header">
+        <div class="brand-container">
+            <!-- Botón circular con el escudo de inicio -->
+            <div class="btn-inicio-escudo">🛡️</div>
+            <div class="brand-text">
+                <h1>VALLE VET PET</h1>
+                <p>EPS, Medicina & Spa Canino</p>
+            </div>
+        </div>
+        <div class="status-network">
+            <span class="status-dot"></span>
+            Red de Atención Valledupar
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="main-content">
+        
+        <!-- SECCIÓN SUPERIOR: Los Indicadores con Signo de Admiración -->
+        <section class="top-indicators">
+            <!-- Bloque Plan Familiar Activo -->
+            <div class="indicator-card plan-card">
+                <span class="badge-category">MIEMBRO VALLE VET PET</span>
+                <h2>Plan Familiar Activo</h2>
+                <p class="subtitle">Tu tranquilidad en las mejores manos</p>
+                <div class="plan-details">
+                    <p><span>🐾 Consultas Médicas:</span> <strong>Copago $0</strong></p>
+                    <p><span>💇 Spa y Peluquería:</span> <strong>20% Descuento</strong></p>
+                    <p><span>🚨 Urgencias 24/7:</span> <strong>Cubierto 100%</strong></p>
+                </div>
+            </div>
+
+            <!-- Bloque Urgencia o Teleconsulta -->
+            <div class="indicator-card alert-card">
+                <div class="badge-row">
+                    <span class="badge-alert">URGENCIA O TELECONSULTA ❗</span>
+                    <span class="live-dot"></span>
+                </div>
+                <h2>Veterinario de Turno</h2>
+                <p>¿Tu mascota presenta algún síntoma extraño? Chatea directamente con nuestro médico de turno.</p>
+                <button class="btn-chat">💬 Chat Médico de Guardia</button>
+            </div>
+
+            <!-- Bloque Asistencia EPS -->
+            <div class="indicator-card assistance-card">
+                <span class="badge-info">ASISTENCIA EPS ❗</span>
+                <h2>Atención al Cliente</h2>
+                <p>Para dudas administrativas, autorizaciones de cirugías, medicamentos o consultas sobre coberturas.</p>
+                <div class="action-links">
+                    <a href="#" class="link-action">📞 Llamar</a>
+                    <a href="#" class="link-action">⚠️ Asesor en Vivo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INFERIOR: Formulario y Citas -->
+        <section class="bottom-layout">
+            <!-- Formulario Agendar Nuevo Servicio -->
+            <div class="card form-card">
+                <div class="card-header-title">
+                    <span class="icon-title">🗓️</span>
+                    <h3>Agendar Nuevo Servicio</h3>
+                </div>
+                <form id="petForm" class="card-body">
+                    <div class="form-group">
+                        <label for="inputPetName">NOMBRE DE LA MASCOTA</label>
+                        <input type="text" id="inputPetName" placeholder="Ej. Kratos" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputService">TIPO DE SERVICIO</label>
+                        <select id="inputService">
+                            <option>Consulta Médica (EPS)</option>
+                            <option>Spa y Peluquería</option>
+                            <option>Urgencias 24/7</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSpecialty">ESPECIALIDAD MÉDICA</label>
+                        <select id="inputSpecialty">
+                            <option>Medicina General</option>
+                            <option>Control Clínico</option>
+                        </select>
+                    </div>
+                    <div class="form-row-datetime">
+                        <div class="form-group">
+                            <label for="inputDate">FECHA</label>
+                            <input type="date" id="inputDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTime">HORA</label>
+                            <input type="time" id="inputTime">
+                        </div>
+                    </div>
+                    <!-- Botón para el Monitoreo integrado aquí -->
+                    <button type="button" id="btnStream" class="btn-primary-cam">Ver Cámara en Vivo</button>
+                </form>
+            </div>
+
+            <!-- Citas Programadas -->
+            <div class="card appointments-card">
+                <div class="card-header-row">
+                    <div class="card-header-title">
+                        <span class="icon-title">📅</span>
+                        <h3>Tus Citas Programadas</h3>
+                    </div>
+                    <span class="appointment-count">0 Citas</span>
+                </div>
+                <div class="appointments-placeholder">
+                    <span class="mailbox-icon">📬</span>
+                    <p>Aún no tienes citas agendadas para esta semana.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+ <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnStream = document.getElementById('btnStream');
+            if (btnStream) {
+                btnStream.addEventListener('click', () => {
+                    // Enlace temporal a un buscador estable para probar el botón sin errores de red
+                    window.open("https://www.google.com", '_blank');
+                    
+                   
+                });
+            }
+        });
+    </script>
+</body>
+</html>
