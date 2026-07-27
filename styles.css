@@ -1,0 +1,308 @@
+:root {
+    --bg-header: #2b7a4b; /* Tu color verde característico */
+    --bg-card-dark: #1e4d30; /* Fondo oscuro del Plan Familiar */
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f6f8f6;
+    color: var(--text-color);
+}
+
+/* Encabezado Principal */
+.main-header {
+    background-color: var(--bg-header);
+    color: white;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* El botón circular con escudo azul */
+.btn-inicio-escudo {
+    width: 42px;
+    height: 42px;
+    background-color: #3a86c8; /* Color azul del escudo */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.brand-text h1 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.brand-text p {
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+.status-network {
+    font-size: 0.8rem;
+    background-color: rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+}
+
+/* Grid de los Indicadores Superiores */
+.main-content {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.top-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.indicator-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+/* Tarjeta Oscura del Plan (CON LETRAS BLANCAS PARA MEJORAR VISIBILIDAD) */
+.plan-card {
+    background-color: var(--bg-card-dark);
+    color: white; /* Hace que los títulos principales sean blancos */
+}
+
+.badge-category {
+    font-size: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.2); /* Un poco más brillante */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.plan-card h2 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: white;
+}
+
+.plan-card .subtitle {
+    font-size: 0.85rem;
+    color: #e0e0e0; /* Gris claro muy legible para el subtítulo */
+    margin-bottom: 15px;
+}
+
+/* Ajuste para las listas de servicios internos */
+.plan-details p {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff; /* Fuerza a que todo el texto sea blanco */
+}
+
+.plan-details p span {
+    color: #ffffff; /* Color para los nombres de los servicios */
+}
+
+.plan-details p strong {
+    color: #ffffff; /* Color para los valores (Copago $0, 20%, etc.) */
+    font-weight: 700;
+}
+
+/* Badges con signos de admiración */
+.badge-alert {
+    background-color: #ffeef0;
+    color: #d9383a;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.badge-info {
+    background-color: #eef3ff;
+    color: #3a76d9;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+}
+
+.indicator-card h2 {
+    font-size: 1.15rem;
+    margin: 10px 0;
+}
+
+.indicator-card p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.btn-chat {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action-links {
+    display: flex;
+    gap: 15px;
+}
+
+.link-action {
+    font-size: 0.85rem;
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Diseño Inferior (Formulario y Citas) */
+.bottom-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.card-header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.icon-title {
+    font-size: 1.2rem;
+}
+
+.card-header-title h3 {
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appointment-count {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fafafa;
+    font-size: 0.85rem;
+}
+
+.form-row-datetime {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Botón de la Cámara Estilo Original Verde */
+.btn-primary-cam {
+    background-color: var(--bg-header);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.appointments-placeholder {
+    text-align: center;
+    padding: 40px 0;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.mailbox-icon {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 8px;
+}
