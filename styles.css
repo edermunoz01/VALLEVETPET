@@ -306,15 +306,8 @@ body {
     display: block;
     margin-bottom: 8px;
 }
-.logo-top {
-    height: 45px;      /* Controla la altura del logo */
-    width: auto;       /* Mantiene la proporción de la imagen */
-    margin-right: 12px; /* Deja un espacio elegante entre el logo y el texto */
+.logo-header {
+    width: 50px;       /* Ajusta el ancho a un tamaño prudente */
+    height: auto;      /* Mantiene la proporción original de la imagen */
     object-fit: contain;
-}
-
-/* Ajuste opcional para centrar los elementos en la barra */
-.brand-container {
-    display: flex;
-    align-items: center;
 }
