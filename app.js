@@ -1,22 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Control del Botón de la Cámara en Vivo
-    const btnStream = document.getElementById('btnStream');
-    
-    if (btnStream) {
-        btnStream.addEventListener('click', () => {
-            const idCamara = "5152941846";
-            // Corrección de URL protegida con comillas invertidas (backticks)
-            const urlNubeCamara = https://www.v380-cloud.com/play?id=${idCamara};
-            window.open(urlNubeCamara, '_blank');
-        });
-    }
-
-    // 2. Control del Formulario (Captura de tu Número)
     const petForm = document.getElementById('petForm');
+    
     if (petForm) {
         petForm.addEventListener('submit', (e) => {
             e.preventDefault(); // Evita que la página se recargue sola
-            
+
+            // 1. Captura de los datos del formulario
             const inputPetName = document.getElementById('inputPetName').value;
             const inputPhone = document.getElementById('inputPhone').value || "3005359435";
             const inputService = document.getElementById('inputService').value;
@@ -24,17 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const inputDate = document.getElementById('inputDate').value;
             const inputTime = document.getElementById('inputTime').value;
 
-            // Aquí quedan listos tus datos consolidados
-            console.log("Datos de la Cita Registrados:", {
-                mascota: inputPetName,
-                telefono: inputPhone,
-                servicio: inputService,
-                especialidad: inputSpecialty,
-                fecha: inputDate,
-                hora: inputTime
-            });
+            // 2. Creamos el texto ordenado para tu WhatsApp
+            const mensajeWhatsApp = ¡Hola! Quiero agendar un servicio:%0A +
+                                    🐾 *Mascota:* ${inputPetName}%0A +
+                                    📞 *Contacto:* ${inputPhone}%0A +
+                                    💼 *Servicio:* ${inputService}%0A +
+                                    🩺 *Especialidad:* ${inputSpecialty}%0A +
+                                    📅 *Fecha:* ${inputDate}%0A +
+                                    ⏰ *Hora:* ${inputTime};
 
-            alert(Servicio agendado con éxito para tu mascota. Contacto registrado: ${inputPhone});
+            // 3. Dirección de redirección directa a tu número 3005359435
+            const urlWhatsApp = https://api.whatsapp.com/send?phone=573005359435&text=${mensajeWhatsApp};
+            
+            // Abre tu WhatsApp con el mensaje ya listo para enviar
+            window.open(urlWhatsApp, '_blank');
         });
     }
 });
