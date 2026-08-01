@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valle Vet Pet</title>
-   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
     <!-- Barra de Navegación Verde Superior -->
-   <header style="background-color: #2e7d32; color: white; padding: 15px; display: flex; align-items: center; justify-content: space-between;">
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <!-- Logo Oficial -->
-        <img src="logo.png" alt="Logo Valle Vet Pet" style="height: 50px; width: auto; border-radius: 4px;">
-        
-        <!-- Texto de la App (Solo una vez) -->
-        <div>
-            <h1 style="margin: 0; font-size: 1.4rem; font-weight: bold; letter-spacing: 0.5px;">VALLE VET PET</h1>
-            <p style="margin: 0; font-size: 0.8rem; opacity: 0.9;">EPS, Medicina & Spa Canino</p>
+    <header class="main-header">
+        <div class="brand-container">
+            <!-- Logo e Identidad Única de la App -->
+            <img src="logo.png" alt="Logo Valle Vet Pet" class="logo-top">
+            <div class="brand-text">
+                <h1>VALLE VET PET</h1>
+                <p>EPS, Medicina & Spa Canino</p>
+            </div>
         </div>
-    </div>
-
-    <!-- Indicador de Red Local -->
-    <div style="background-color: rgba(255,255,255,0.15); padding: 8px 12px; border-radius: 8px; font-size: 0.8rem; text-align: right;">
-        <span style="color: #4ebd6d;">●</span> Red de Atención<br>Valledupar
-    </div>
-</header>
+        <div class="status-network">
+            <span class="status-dot"></span>
+            Red de Atención Valledupar
+        </div>
+    </header>
 
     <!-- Contenedor Principal -->
     <main class="main-content">
         
-        <!-- SECCIÓN SUPERIOR: Los Indicadores con Signo de Admiración -->
+        <!-- SECCIÓN SUPERIOR: Indicadores de Servicio -->
         <section class="top-indicators">
             <!-- Bloque Plan Familiar Activo -->
             <div class="indicator-card plan-card">
@@ -45,27 +42,27 @@
                 </div>
             </div>
 
-           <!-- Bloque Urgencia o Teleconsulta -->
-<div class="indicator-card alert-card">
-    <div class="badge-row">
-        <span class="badge-alert">URGENCIA O TELECONSULTA !</span>
-        <span class="live-dot"></span>
-    </div>
-    <h2>Veterinario de Turno</h2>
-    <p>¿Tu mascota presenta algún síntoma extraño? Chatea directamente con nuestro médico de turno.</p>
-    <a href="https://wa.me/573005359435?text=¡URGENCIA!%20Hola%20Valle%20Vet%20Pet,%20necesito%20atención%20médica%20inmediata%20para%20mi%20mascota" target="_blank" class="btn-chat" style="text-decoration: none; display: inline-block; text-align: center; line-height: 40px; box-sizing: border-box; width: 100%;">💬 Chat Médico de Guardia</a>
-</div>
+            <!-- Bloque Urgencia o Teleconsulta -->
+            <div class="indicator-card alert-card">
+                <div class="badge-row">
+                    <span class="badge-alert">URGENCIA O TELECONSULTA ❗</span>
+                    <span class="live-dot"></span>
+                </div>
+                <h2>Veterinario de Turno</h2>
+                <p>¿Tu mascota presenta algún síntoma extraño? Chatea directamente con nuestro médico de turno.</p>
+                <button class="btn-chat">💬 Chat Médico de Guardia</button>
+            </div>
 
-<!-- Bloque Asistencia EPS -->
-<div class="indicator-card assistance-card">
-    <span class="badge-info">ASISTENCIA EPS !</span>
-    <h2>Atención al Cliente</h2>
-    <p>Para dudas administrativas, autorizaciones de cirugías, medicamentos o consultas sobre coberturas.</p>
-    <div class="action-links">
-        <a href="tel:+573005359435" class="link-action">📞 Llamar</a>
-        <a href="https://wa.me/573005359435?text=Hola%20Valle%20Vet%20Pet,%20necesito%20asesoría%20con%20la%20EPS" target="_blank" class="link-action">⚠️ Asesor en Vivo</a>
-    </div>
-</div>
+            <!-- Bloque Asistencia EPS -->
+            <div class="indicator-card assistance-card">
+                <span class="badge-info">ASISTENCIA EPS ❗</span>
+                <h2>Atención al Cliente</h2>
+                <p>Para dudas administrativas, autorizaciones de cirugías, medicamentos o consultas sobre coberturas.</p>
+                <div class="action-links">
+                    <a href="#" class="link-action">📞 Llamar</a>
+                    <a href="#" class="link-action">⚠️ Asesor en Vivo</a>
+                </div>
+            </div>
         </section>
 
         <!-- SECCIÓN INFERIOR: Formulario y Citas -->
@@ -80,6 +77,11 @@
                     <div class="form-group">
                         <label for="inputPetName">NOMBRE DE LA MASCOTA</label>
                         <input type="text" id="inputPetName" placeholder="Ej. Kratos" required>
+                    </div>
+                    <!-- CAMBIO NUEVO: Campo para el Número de Contacto -->
+                    <div class="form-group">
+                        <label for="inputPhone">NÚMERO DE TELÉFONO / CONTACTO</label>
+                        <input type="tel" id="inputPhone" placeholder="Ej. 3001234567" required>
                     </div>
                     <div class="form-group">
                         <label for="inputService">TIPO DE SERVICIO</label>
@@ -118,26 +120,25 @@
                         <span class="icon-title">📅</span>
                         <h3>Tus Citas Programadas</h3>
                     </div>
-                    <span class="appointment-count">0 Citas</span>
+                    <span class="appointment-count" id="appointmentCount">0 Citas</span>
                 </div>
-                <div class="appointments-placeholder">
+                <div class="appointments-placeholder" id="appointmentsPlaceholder">
                     <span class="mailbox-icon">📬</span>
                     <p>Aún no tienes citas agendadas para esta semana.</p>
                 </div>
+                <div id="appointmentsList" class="appointments-list"></div>
             </div>
         </section>
 
     </main>
 
- <script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const btnStream = document.getElementById('btnStream');
             if (btnStream) {
                 btnStream.addEventListener('click', () => {
-                    // Enlace temporal a un buscador estable para probar el botón sin errores de red
+                    // Enlace de prueba para el flujo de la cámara en vivo del Spa
                     window.open("https://www.google.com", '_blank');
-                    
-                   
                 });
             }
         });
