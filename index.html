@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valle Vet Pet</title>
+    <!-- Busca styles.css directamente en la raíz -->
     <link rel="stylesheet" href="/VALLEVETPET/styles.css">
+    <!-- Apunta a MANIFEST.JSON en mayúsculas tal como está en GitHub -->
     <link rel="manifest" href="/VALLEVETPET/MANIFEST.JSON">
 </head>
 <body>
 
     <!-- Barra de Navegación Verde Superior -->
     <header class="main-header">
-        <!-- Alineamos el contenedor forzando flexbox y un espacio entre logo y texto -->
         <div class="brand-container" style="display: flex; align-items: center; gap: 12px;">
-            <!-- Forzamos el tamaño del logo a 70 pixeles para que no se vea gigante -->
+            <!-- Carga logo.png.jpeg y le fija un tamaño correcto -->
             <img src="/VALLEVETPET/logo.png.jpeg" alt="Logo Valle Vet Pet" class="logo-top" style="width: 70px; height: auto; border-radius: 8px;">
-            
             <div class="brand-text">
                 <h1>VALLE VET PET</h1>
                 <p>EPS, Medicina & Spa Canino</p>
@@ -58,7 +58,8 @@
                 <h2>Atención al Cliente</h2>
                 <p>Para dudas administrativas, autorizaciones de cirugías, medicamentos o consultas sobre coberturas.</p>
                 <div class="action-links">
-                    <a href="#" class="link-action">📞 Llamar</a>
+                    <!-- Enlace directo a tu número de contacto -->
+                    <a href="tel:3005359435" class="link-action">📞 Llamar</a>
                     <a href="#" class="link-action">⚠️ Asesor en Vivo</a>
                 </div>
             </div>
@@ -78,7 +79,8 @@
                     </div>
                     <div class="form-group">
                         <label for="inputPhone">NÚMERO DE TELÉFONO / CONTACTO</label>
-                        <input type="tel" id="inputPhone" placeholder="Ej. 3001234567" required>
+                        <!-- Tu número asignado por defecto en la caja de texto -->
+                        <input type="tel" id="inputPhone" value="3005359435" placeholder="Ej. 3005359435" required>
                     </div>
                     <div class="form-group">
                         <label for="inputService">TIPO DE SERVICIO</label>
@@ -127,6 +129,7 @@
 
     </main>
 
+    <!-- Carga tu script app.js directamente desde la raíz -->
     <script src="/VALLEVETPET/app.js"></script>
 
     <script>
