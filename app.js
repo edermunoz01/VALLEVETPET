@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (petForm) {
         petForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Evita que la página se recargue sola
+            e.preventDefault(); // Evita que la página se recargue
 
             // 1. Captura de los datos del formulario
             const inputPetName = document.getElementById('inputPetName').value;
@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     📅 *Fecha:* ${inputDate}%0A +
                                     ⏰ *Hora:* ${inputTime};
 
-            // 3. Dirección de redirección directa a tu número 3005359435
+            // 3. Dirección de redirección directa a tu número con el código de país (57)
             const urlWhatsApp = https://api.whatsapp.com/send?phone=573005359435&text=${mensajeWhatsApp};
             
-            // Abre tu WhatsApp con el mensaje ya listo para enviar
-            window.open(urlWhatsApp, '_blank');
+            // CORRECCIÓN REDIRECCIÓN: Usa la ventana actual para saltar el bloqueo del navegador móvil
+            window.location.href = urlWhatsApp;
         });
     }
 });
