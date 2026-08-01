@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valle Vet Pet</title>
-    <!-- CORRECCIÓN: Tu archivo styles.css está en la raíz, no dentro de una carpeta css -->
     <link rel="stylesheet" href="/VALLEVETPET/styles.css">
-    <!-- CORRECCIÓN: Tu archivo en la foto está en mayúsculas MANIFEST.JSON -->
     <link rel="manifest" href="/VALLEVETPET/MANIFEST.JSON">
 </head>
 <body>
 
     <!-- Barra de Navegación Verde Superior -->
     <header class="main-header">
-        <div class="brand-container">
-            <!-- CORRECCIÓN: Tu archivo en la foto se llama logo.png.jpeg -->
-            <img src="/VALLEVETPET/logo.png.jpeg" alt="Logo Valle Vet Pet" class="logo-top">
+        <!-- Alineamos el contenedor forzando flexbox y un espacio entre logo y texto -->
+        <div class="brand-container" style="display: flex; align-items: center; gap: 12px;">
+            <!-- Forzamos el tamaño del logo a 70 pixeles para que no se vea gigante -->
+            <img src="/VALLEVETPET/logo.png.jpeg" alt="Logo Valle Vet Pet" class="logo-top" style="width: 70px; height: auto; border-radius: 8px;">
+            
             <div class="brand-text">
                 <h1>VALLE VET PET</h1>
                 <p>EPS, Medicina & Spa Canino</p>
@@ -32,7 +32,6 @@
         
         <!-- SECCIÓN SUPERIOR: Indicadores de Servicio -->
         <section class="top-indicators">
-            <!-- Bloque Plan Familiar Activo -->
             <div class="indicator-card plan-card">
                 <span class="badge-category">MIEMBRO VALLE VET PET</span>
                 <h2>Plan Familiar Activo</h2>
@@ -44,7 +43,6 @@
                 </div>
             </div>
 
-            <!-- Bloque Urgencia o Teleconsulta -->
             <div class="indicator-card alert-card">
                 <div class="badge-row">
                     <span class="badge-alert">URGENCIA O TELECONSULTA ❗</span>
@@ -55,7 +53,6 @@
                 <button class="btn-chat">💬 Chat Médico de Guardia</button>
             </div>
 
-            <!-- Bloque Asistencia EPS -->
             <div class="indicator-card assistance-card">
                 <span class="badge-info">ASISTENCIA EPS ❗</span>
                 <h2>Atención al Cliente</h2>
@@ -69,7 +66,6 @@
 
         <!-- SECCIÓN INFERIOR: Formulario y Citas -->
         <section class="bottom-layout">
-            <!-- Formulario Agendar Nuevo Servicio -->
             <div class="card form-card">
                 <div class="card-header-title">
                     <span class="icon-title">🗓️</span>
@@ -113,7 +109,6 @@
                 </form>
             </div>
 
-            <!-- Citas Programadas -->
             <div class="card appointments-card">
                 <div class="card-header-row">
                     <div class="card-header-title">
@@ -132,7 +127,6 @@
 
     </main>
 
-    <!-- Lógica de tu app.js en la raíz -->
     <script src="/VALLEVETPET/app.js"></script>
 
     <script>
