@@ -43,6 +43,7 @@
                 </div>
             </div>
 
+            <!-- TARJETA: Veterinario de Turno (Botón Verde) -->
             <div class="indicator-card alert-card">
                 <div class="badge-row">
                     <span class="badge-alert">URGENCIA O TELECONSULTA ❗</span>
@@ -50,17 +51,21 @@
                 </div>
                 <h2>Veterinario de Turno</h2>
                 <p>¿Tu mascota presenta algún síntoma extraño? Chatea directamente con nuestro médico de turno.</p>
-                <button class="btn-chat">💬 Chat Médico de Guardia</button>
+                <!-- CORRECCIÓN: Ahora redirige al WhatsApp con mensaje de Urgencia -->
+                <a href="https://api.whatsapp.com/send?phone=573005359435&text=🚨%20¡Hola!%20Necesito%20contactar%20al%20Veterinario%20de%20Turno%20de%20Urgencia." class="btn-chat" style="display: inline-block; text-align: center; text-decoration: none; box-sizing: border-box; width: 100%;">💬 Chat Médico de Guardia</a>
             </div>
 
+            <!-- TARJETA: Atención al Cliente (Enlaces Abajo) -->
             <div class="indicator-card assistance-card">
                 <span class="badge-info">ASISTENCIA EPS ❗</span>
                 <h2>Atención al Cliente</h2>
                 <p>Para dudas administrativas, autorizaciones de cirugías, medicamentos o consultas sobre coberturas.</p>
                 <div class="action-links">
-                    <!-- Enlace directo a tu número de contacto -->
-                    <a href="tel:3005359435" class="link-action">📞 Llamar</a>
-                    <a href="#" class="link-action">⚠️ Asesor en Vivo</a>
+                    <!-- CORRECCIÓN: Abre chat de WhatsApp solicitando información -->
+                    <a href="https://api.whatsapp.com/send?phone=573005359435&text=📞%20¡Hola!%20Quiero%20comunicarme%20con%20Atención%20al%20Cliente%20de%20Valle%20Vet%20Pet." class="link-action">📞 Llamar por WhatsApp</a>
+                    
+                    <!-- CORRECCIÓN: Abre chat de WhatsApp para hablar con asesor -->
+                    <a href="https://api.whatsapp.com/send?phone=573005359435&text=⚠️%20¡Hola!%20Necesito%20un%20Asesor%20en%20Vivo%20para%20una%20consulta." class="link-action">⚠️ Asesor en Vivo</a>
                 </div>
             </div>
         </section>
@@ -107,7 +112,8 @@
                             <input type="time" id="inputTime">
                         </div>
                     </div>
-                    <button type="button" id="btnStream" class="btn-primary-cam">Ver Cámara en Vivo</button>
+                    <!-- Tipo submit para activar la acción del formulario -->
+                    <button type="submit" id="btnStream" class="btn-primary-cam">Ver Cámara en Vivo</button>
                 </form>
             </div>
 
@@ -131,16 +137,5 @@
 
     <!-- Carga tu script app.js directamente desde la raíz -->
     <script src="/VALLEVETPET/app.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btnStream = document.getElementById('btnStream');
-            if (btnStream) {
-                btnStream.addEventListener('click', () => {
-                    window.open("https://www.google.com", '_blank');
-                });
-            }
-        });
-    </script>
 </body>
 </html>
